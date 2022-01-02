@@ -15,7 +15,7 @@
             <span id="user-score">0</span> : <span id="comp-score">0</span>
         </div>
         <div class="result">
-            <p>Paper covers rock. You win!</p>
+            <p>Make your move.</p>
         </div>
         <div class="choices">
             <div class="choice" id="rock">
@@ -28,7 +28,21 @@
                 <img src="Images/Scissors.jpg" width="150" height="150" alt="Scissors">
             </div>
         </div>
-        <p id="action-message">Make your move.</p>
+        <p id="action-message">Choose the win values.</p>
+        <div class="sliders">
+            <div class="slidername" id="rock">Rock</div>
+            <div class="slider" id="rock">
+                <input type="range" min="0" max="10" value="1" class="slider" id="rock_slider">
+            </div>
+            <div class="slidername" id="paper">Paper</div>
+            <div class="slider" id="paper">
+                <input type="range" min="0" max="10" value="1" class="slider" id="paper_slider">
+            </div>
+            <div class="slidername" id="scissors">Scissors</div>
+            <div class="slider" id="scissors">
+                <input type="range" min="0" max="10" value="1" class="slider" id="scissors_slider">
+            </div>
+        </div>
         <script src="app.js" charset="utf-8"></script>
     </body>
 </html>

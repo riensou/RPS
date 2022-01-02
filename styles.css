@@ -67,7 +67,7 @@ header > h1 {
 }
 
 .choices {
-    margin: 50px 0;
+    margin: 30px 0;
     text-align: center;
 }
 
@@ -87,5 +87,39 @@ header > h1 {
     color: white;
     font-family: Asap, sans-serif;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
+}
+
+.sliders {
+    margin: 25px 0;
+    text-align: center;
+    color: white;
+    font-family: Asap, sans-serif
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 20px;
+    outline: none;
+  }
+
+.slider:hover {
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px; 
+    height: 20px; 
+    background: #E2584D;
+}
+
+.slidername {
+    text-align: center;
+    color: white;
+    font-family: Asap, sans-serif;
+    font-size: 20px;
+    margin: 5px 0;
 }

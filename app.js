@@ -8,6 +8,22 @@ const rock_div = document.getElementById("rock");
 const paper_div = document.getElementById("paper");
 const scissors_div = document.getElementById("scissors");
 
+var rock_slider = document.getElementById("rock_slider");
+var paper_slider = document.getElementById("paper_slider");
+var scissors_slider = document.getElementById("scissors_slider");
+
+function getWinPoints(winnerChoice) {
+    if (winnerChoice == "Rock") {
+        return parseInt(rock_slider.value)
+    }
+    else if (winnerChoice == "Paper") {
+        return parseInt(paper_slider.value)
+    }
+    else {
+        return parseInt(scissors_slider.value)
+    }
+}
+
 function getCompChoice() {
     const choices = ["Rock", "Paper", "Scissors"];
     return choices[Math.floor(Math.random() * 3)];
@@ -34,7 +50,7 @@ function game(userChoice) {
 
 function win(userChoice, compChoice) {
     console.log("User wins."); 
-    userScore++;
+    userScore += getWinPoints(userChoice);
     userScore_span.innerHTML = userScore;
     result_p.innerHTML = userChoice + " beats " + compChoice + ". You win!";
 }
@@ -46,7 +62,7 @@ function tie(userChoice, compChoice) {
 
 function lose(userChoice, compChoice) {
     console.log("User loses.");
-    compScore++;
+    compScore += getWinPoints(compChoice);
     compScore_span.innerHTML = compScore;
     result_p.innerHTML = compChoice + " beats " + userChoice + ". You lose.";
 }
